@@ -1,0 +1,23 @@
+This is an app to be used to manage todos. Here are the basic functions:
+// Import required libraries
+const express = require('express');
+// Initialize app
+const app = express();
+// Define routes
+app.get('/', (req, res) => {
+  res.send('Welcome to the Todos API!');  
+  });
+  app.get('/todos', (req, res) => {
+    // Get todos from database
+    const todos = [{
+      id: 1,
+      name: 'Buy groceries',
+      completed: false
+    }, {
+      id: 2,
+      name: 'Do laundry',
+      completed: true
+    }];
+    res.json(todos);
+  });
+    
