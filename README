@@ -1,23 +1,43 @@
-This is an app to be used to manage todos. Here are the basic functions:
-// Import required libraries
-const express = require('express');
-// Initialize app
-const app = express();
-// Define routes
-app.get('/', (req, res) => {
-  res.send('Welcome to the Todos API!');  
-  });
-  app.get('/todos', (req, res) => {
-    // Get todos from database
-    const todos = [{
-      id: 1,
-      name: 'Buy groceries',
-      completed: false
-    }, {
-      id: 2,
-      name: 'Do laundry',
-      completed: true
-    }];
-    res.json(todos);
-  });
-    
+# GitHub OAuth App
+
+## Overview
+This application is designed to authenticate users via GitHub using OAuth. It's built with Node.js and integrates with GitHub's OAuth service to provide a seamless authentication experience.
+
+## Features
+- User authentication via GitHub OAuth
+- Secure handling of environment variables with `.env` file
+- Easy to integrate with other Node.js applications
+
+## Prerequisites
+- Node.js
+- npm (Node Package Manager)
+- A GitHub account
+- A registered GitHub OAuth application (for Client ID and Client Secret)
+
+## Installation
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/CaioASM/GitHub-OAuth-App.git
+   cd GitHub-OAuth-App
+
+## Install Dependencies
+npm install
+
+## Set Up Environment Variables 
+- Create a .env file in the root directory.
+- Add the following lines, replacing the placeholders with your actual GitHub OAuth application details:
+GITHUB_CLIENT_ID='your_client_id'
+GITHUB_CLIENT_SECRET='your_client_secret'
+
+
+### Running Application
+## Start Server
+# node app.js
+
+
+## Access the Application
+ - Open your browser and navigate to http://localhost:3000 (or your configured port).
+
+
+### License
+# This project is licensed under the MIT License.
